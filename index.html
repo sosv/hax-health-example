@@ -1,7 +1,130 @@
-<!DOCTYPE html>
 <html>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+	<script type="text/javascript" src="http://code.highcharts.com/modules/data.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	$.get('kindara.csv', function(csv) {
+		$('#kindara').highcharts({
+			chart: {
+				type: 'line'
+			},
+			data: {
+				csv: csv
+			},
+			title: {
+				text: 'Kindara Body Temperature Over Time'
+			},
+			yAxis: {
+				title: {
+					text: 'Temperature'
+				}
+			}
+		});
+	});
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	$.get('h2opal.csv', function(csv) {
+		$('#h2opal').highcharts({
+			chart: {
+				type: 'line'
+			},
+			data: {
+				csv: csv
+			},
+			title: {
+				text: 'H2O-Pal Value Over Time'
+			},
+			yAxis: {
+				title: {
+					text: 'Value'
+				}
+			}
+		});
+	});
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	$.get('quitbit.csv', function(csv) {
+		$('#quitbit').highcharts({
+			chart: {
+				type: 'column'
+			},
+			data: {
+				csv: csv
+			},
+			title: {
+				text: 'Quitbit Daily Smoking Habits'
+			},
+			yAxis: {
+				title: {
+					text: '# of Times Per day'
+				}
+			}
+		});
+	});
+	});
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	$.get('foobot.csv', function(csv) {
+		$('#foobot').highcharts({
+			chart: {
+				type: 'line'
+			},
+			data: {
+				csv: csv
+			},
+			title: {
+				text: 'Foobot Air quality Over Time'
+			},
+			yAxis: {
+				title: {
+					text: 'Air quality (µg/m3)'
+				}
+			}
+		});
+	});
+	});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$.get('pillsy.csv', function(abc) {
+				$('#pillsy').highcharts({
+					chart: {
+						type: 'line'
+					},
+					data: {
+						csv: abc,
+
+
+					},
+					title: {
+						text: 'Pillsy Time Taken'
+					},
+					yAxis: {
+						title: {
+							text: 'Time of Day',
+							type: 'datetime'
+						}
+					
+					}	
+				});	
+			
+			
+			});
+		});
+	</script>
+		<div id="kindara" style="width:100%; height:400px;"></div>
+		<div id="h2opal" style="width:100%; height:400px;"></div>
+		<div id="quitbit" style="width:100%; height:400px;"></div>
+		<div id="foobot" style="width:100%; height:400px;"></div>
+		<div id="pillsy" style="width:100%; height:400px;"></div>
 </body>
 </html>
