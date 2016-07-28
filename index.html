@@ -5,6 +5,18 @@
 	<script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
 </head>
 <body>
+  <style type="text/css">
+    .source {
+      text-align: center;
+      display: block;
+    }
+    .source a {
+      text-decoration: none;
+    }
+    .source a:hover {
+      text-decoration: underline;
+    }
+  </style>
 	<script type="text/javascript">
 	$(document).ready(function() {
 	$.get('kindara.csv', function(csv) {
@@ -122,9 +134,34 @@
 		});
 	</script>
 		<div id="kindara" style="width:100%; height:400px;"></div>
+    <div class="source">
+      <strong>kindara</strong>
+      | <a href="http://www.kindara.com">www</a>
+      | <a href="kindara.csv">csv</a>
+    </div>
 		<div id="h2opal" style="width:100%; height:400px;"></div>
+    <div class="source">
+      <strong>h2opal</strong>
+      | <a href="http://www.h2opal.com">www</a>
+      | <a href="h2opal.csv">csv</a>
+    </div>
 		<div id="quitbit" style="width:100%; height:400px;"></div>
+    <div class="source">
+      <strong>quitbit</strong>
+      | <a href="http://www.quitbitlighter.com">www</a>
+      | <a href="quitbit.csv">csv</a>
+    </div>
 		<div id="foobot" style="width:100%; height:400px;"></div>
+    <div class="source">
+      <strong>foobot</strong>
+      | <a href="http://www.foobot.io">www</a>
+      | <a href="foobot.csv">csv</a>
+    </div>
 		<div id="pillsy" style="width:100%; height:400px;"></div>
+    <div class="source">
+      <strong>pillsy</strong>
+      | <a href="http://www.pillsy.com">www</a>
+      | <a href="pillsy.csv">csv</a>
+    </div>
 </body>
 </html>
